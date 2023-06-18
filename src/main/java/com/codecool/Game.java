@@ -8,7 +8,7 @@ public class Game {
     private List<Ship> shipsPlayer2 = new ArrayList<>();
     List<Board> boards;
 
-    public void gameLogic() {
+    public void addShipsToEmptyBoard() {
         Input board1 = new Input();
         boards = board1.getBoards();
         Board boardPlayer1 = boards.get(0);
@@ -39,6 +39,8 @@ public class Game {
         display.printBoard(boardPlayer2);
         int numberOfShipPlayer1 = player1.numberOfSquaresOfShips(shipsPlayer1);
         int numberOfShipPlayer2 = player2.numberOfSquaresOfShips(shipsPlayer2);
+        System.out.println(numberOfShipPlayer1+ "player 1");
+        System.out.println(numberOfShipPlayer2+ "player 2");
         while (gameOn){
             int[] ShootCoordinates;
             ShootCoordinates = board1.shoot(0);

@@ -42,8 +42,8 @@ public class Board {
             case 2:
                 square.setSquareStatus(SquareStatus.SHIP);
                 ship.add(square);
-                int x = square.getX();
-                int y = square.getY();
+                int x= square.getX();
+                int y= square.getY();
                 ship.add(new Square(x, y+1, SquareStatus.SHIP));
                 break;
             case 3:

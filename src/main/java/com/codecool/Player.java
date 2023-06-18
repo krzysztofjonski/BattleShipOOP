@@ -30,18 +30,19 @@ public class Player {
                 if (square.getY() == y && square.getX() == x && square.getSquareStatus().equals(SquareStatus.SHIP)) {
                     square.setSquareStatus(SquareStatus.HIT);
                     board.getSquare(x, y).setSquareStatus(SquareStatus.HIT);
+                    System.out.println("Already Hit");
                     return true;
 
                 } else if (square.getY() == y && square.getX() == x && square.getSquareStatus().equals(SquareStatus.HIT)) {
                     square.setSquareStatus(SquareStatus.HIT);
                     board.getSquare(x, y).setSquareStatus(SquareStatus.HIT);
-                    System.out.printf("Already Hit");
+                    System.out.println("Already Hit");
                     return false;
                 }
             }
         }
         board.getSquare(x, y).setSquareStatus(SquareStatus.MISSED);
-        System.out.printf("Miss");
+        System.out.println("Miss");
         return false;
     }
 }

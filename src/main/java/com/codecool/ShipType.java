@@ -9,7 +9,7 @@ public enum ShipType {
 
     public final Integer label;
 
-    ShipType(Integer label) {
+    private ShipType(Integer label) {
         this.label = label;
     }
 }

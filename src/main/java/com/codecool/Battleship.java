@@ -9,7 +9,7 @@ public class Battleship {
         display = new Display();
     }
 
-    public void start() {
+    public void Start() {
         display.printMenu();
         mainMenu();
 
@@ -20,18 +20,17 @@ public class Battleship {
         input = new Input();
 
         while (!exit) {
-            display.printMainMenuOption();
+            display.printMainMenuOptions();
             System.out.println("Enter your choice: ");
             System.out.println();
             choice = input.getIntegerMenuOption();
             switch (choice) {
                 case 0:
                 display.printMessages("You choose to play the game ");
-                game.gameLogic();
-
+                game.addShipsToEmptyBoard();
                 break;
-
                 case 1:
+                    display.printMessages("\033[H\033[2J");
                     System.out.flush();
                     display.gameRules();
                     break;

@@ -45,7 +45,7 @@ public class Display {
     public void printMessages(String message) {
         System.out.println(message);
     }
-    public void printMainMenuOption() {
+    public void printMainMenuOptions() {
         System.out.println("Press : \n" +
                 "\t 0 - Play \n" +
                 "\t 1 - Print game Rules \n" +
@@ -62,21 +62,17 @@ public class Display {
 
     public void printBoard(Board board) {
         System.out.print("   ");
+
+
         for (int i = 0; i < board.getSizeX(); i++) {
-            if (i < 10) {
-                System.out.print(i + "  ");
-
-            } else {
-                System.out.print(i + " ");
-            }
-
+            System.out.print(i + "  ");
         }
         System.out.println();
         for (int row = 0; row < board.getSizeX(); row++) {
             if (row < 10) {
                 System.out.print(row + "  ");
             } else {
-                System.out.print(row + " ");
+                System.out.print(row);
             }
 
             for (int col = 0; col < board.getSizeY(); col++) {
@@ -99,7 +95,7 @@ public class Display {
 
 
                 }
-        }
+            }
             System.out.println();
 
         }
